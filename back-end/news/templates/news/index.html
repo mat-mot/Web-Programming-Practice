@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>اخبار روز</title>
+    <link rel="stylesheet" type="text/css" href="{% static '' %}news/style.css">
+    <link rel="icon" type="image/x-icon" href="{% static '' %}news/media/images/favicon.jpg">
+    <script src="{% static '' %}news/JScript.js"></script>
+</head>
+<body onload="setInterval(middle_news_slide_timer,2000)">
+
+<div id="ads-banner">
+    <img src="{% static '' %}news/media/images/ads.gif" alt="ads">
+</div>
+
+<ul id="menu-1">
+    <li><a>خانه</a></li>
+    <li class="dropdown"><a href="">اخبار</a>
+        <ul id="menu-2">
+            <li><a>سیاسی</a></li>
+            <li><a>اجتماعی</a></li>
+            <li class="dropdown2"><a>ورزشی</a>
+                <div class="dropdown-level2-content">
+                    <a>فوتبال</a>
+                    <a>والیبال</a>
+                    <a>بسکتبال</a>
+                </div>
+            </li>
+            <li><a>اقتصادی</a></li>
+        </ul>
+    </li>
+    <li><a>آرشیو</a></li>
+    <li><a>درباره‌ی ‌ما</a></li>
+    <li><a>تماس با ما</a></li>
+    <li><a href="#" onclick="login_clicked()">ورود  به باشگاه خبرنگاران</a></li>
+    <li id="search">
+        <a id="magnifier"><img src="{% static '' %}news/media/images/search.png" alt="magnifier"></a>
+        <input id="search_input" type="text" name="search" placeholder="جستجو کنید ...">
+    </li>
+</ul>
+
+<div id="news">
+    <div style="width: 100px">
+    </div>
+    <div id="right_news">
+        <div id="rn-heathers">
+            <a id="h1" href="javascript:void(0)" onclick="right_news_heather(this)"><h4 id="rn-title-h1">نگاه ویژه</h4></a>
+            <a id="h2" href="javascript:void(0)" onclick="right_news_heather(this)"><h4 id="rn-title-h2">پربازدید</h4></a>
+            <a id="h3" href="javascript:void(0)" style="border: none" onclick="right_news_heather(this)"><h4 id="rn-title-h3">دیدنی‌ها</h4></a>
+        </div>
+        <div id="heather1">
+            <a class="left_item" href="javascript:void(0)">
+                <img src="{% static '' %}news/media/images/gid.jpg" alt="gid person">
+                آمریکا، ایران و خطر یک جنگ گسترده‌تر در خاورمیانه؟
+                <br>
+                گیدئون راجمن
+            </a>
+            <a class="left_item" href="javascript:void(0)">
+                <img src="{% static '' %}news/media/images/pol.jfif" alt="pol person">
+                به این دلایل جنگ زمینی اسرائیل در غزه خوب پیش نخواهد رفت.
+                <br>
+                پل راجرز
+            </a>
+            <a class="left_item" href="javascript:void(0)">
+                <img src="{% static '' %}news/media/images/arash.jpg" alt="arash person">
+                ترس و اضطراب می‌تواند کمک کند؛ چگونه از آن به نفع خود استفاده کنیم.
+                <br>
+                آرش جوانبخت
+            </a>
+            <a class="left_item" href="javascript:void(0)">
+                <img src="{% static '' %}news/media/images/hamid.jpg" alt="hamid person">
+                چگونه غرب در تلاش برای &lt;&lt;اختراع مجدد اسرائیل&gt;&gt; است؟
+                <br>
+                حمید دباشی
+            </a>
+        </div>
+        <div id="heather2">
+            <a class="right_item1" href="javascript:void(0)"><p>سپهر حیدری یک سال محروم شد.</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>توضیح رئیس دانشگاه تهران درباره درگیری با دانشجویان</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>وام مسکن ایثارگران ۶۰۰ میلیون تومان شد</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>اختراع شگفت‌انگیز دانشمندان ایرانی در آمریکا</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>آمریکا در تله انفجاری غره چه خواهد کرد؟</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>پشت پرده وام ۲۰۰ میلیونی بانک ملی </p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>رتبه آخر پرسپولیس در آسیا، کمترین فرصت گل</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>این پرسپولیسی مرد اول سینمای ایران شد</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>گران ترین ساعت دنیا به رونالدو رسید</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>طوفان برفی قدرتمند</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>جنگ خندق در قرن ۲۱</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>پیش‌بینی قیمت بیت‌کوین</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>خداحافطی حسن یزدانی از کشتی</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>ایران باید با طالبان چه کند؟</p></a>
+            <a class="right_item1" href="javascript:void(0)"><p>چرا رشد اقتصادی چین منافع آمریکا را تهدید خواهد کرد؟</p></a>
+        </div>
+        <div id="heather3">
+            <a class="right_item" href="javascript:void(0)">
+                <img src="{% static '' %}news/media/images/malake.jpeg" alt="malake with fil">
+                <p>(ویدئو) ملکه انگلیس به بک بجه فیل شیر داد.</p>
+            </a>
+            <a class="right_item" href="javascript:void(0)">
+                <img src="{% static '' %}news/media/images/1786281_991.jpg" alt="police">
+                <p>(ویدئو) تعقیب و گریز پلیس با هامر سرقتی؛ تلاش برای سرقت دو خودروی دیگر!</p>
+            </a>
+            <a class="right_item" href="javascript:void(0)">
+                <img src="{% static '' %}news/media/images/akasi.jpg" alt="akasi">
+                <p>(تصاویر) برندگان مسابقه عکاسی از سگ‌ها در سال ۲۰۲۲</p>
+            </a>
+            <a class="right_item" href="javascript:void(0)">
+                <img src="{% static '' %}news/media/images/israel.jpg" alt="israel">
+                <p>(تصاویر) اسرائیل اردوگاه جبالبا را بر روی سر صد‌ها فلسطینی خراب کرد.</p>
+            </a>
+            <a class="right_item" href="javascript:void(0)">
+                <img src="{% static '' %}news/media/images/koshti.jpg" alt="koshti">
+                <p>(ویدئو) مدرسه کشتی دختران؛ تابوشکنی دختران</p>
+            </a>
+        </div>
+    </div>
+    <div id="middle_news" onmouseover="middle_news_slide_mouseover()" onmouseleave="middle_news_slide_mouseleave()">
+        <div id="mn_item1">
+            <a class="mn_item" href="javascript:void(0)">
+            <h2>اعلام حکم AFC : نتیجه سپاهان-الاتحاد ۳-۰ شد</h2>
+            <p>علاوه بر نتیجه، سپاهان ۲۰۰ هزار جریمه و سه بازی خارج از نقش‌جهان باید بازی کند.</p>
+            <img src="{% static '' %}news/media/images/sepahan.jpg" alt="sepahan">
+            </a>
+        </div>
+        <div id="mn_item2">
+            <a class="mn_item" href="javascript:void(0)">
+                <h2>جزئیات آتش‌سوزی مرگبار در کمپ ترک‌اعتیاد لنگرود</h2>
+                <p>این خبر تکمیل می‌شود ...</p>
+                <img src="{% static '' %}news/media/images/kamp.jpg" alt="kamp">
+            </a>
+        </div>
+        <div id="mn_item3">
+            <a class="mn_item" href="javascript:void(0)">
+                <h2>فوران بلندترین آتشفشان فعال در اوراسیا </h2>
+                <p>ستون‌های خاکستر بر فراز شبه جزیره کامچاتکا روسیه به آسمان پرتاب شد</p>
+                <img src="{% static '' %}news/media/images/favaran.jpg" alt="favaran">
+            </a>
+        </div>
+    </div>
+    <div style="width: 100px">
+    </div>
+</div>
+
+<div id="combobox">
+    <div id="cbitem1">
+        <div class="cbheather">
+            <h4>آخرین اخبار سیاسی</h4>
+            <a class="button" onclick="oopen('cbitem1')" href="javascript:void(0)">+</a>
+            <a class="button d-none" onclick="cloose('cbitem1')"  href="javascript:void(0)">-</a>
+        </div>
+        <div id="cbdetails" class="cbdetails">
+            <ul>
+                <li>دونالد ترامپ بزرگترین خطر برای جهان در سال 2024 خواهد بود.</li>
+                <li>واکنش باهنر به رد صلاحیت پزشکان، خردمندانه برخورد نکرد.</li>
+                <li>انتقاد ابوترابی فرد، امام جمعه موقت تهران از رد صلاحیت‌ها</li>
+                <li>حماس از بیمارستان الشفا به عنوان مرکز فرماندهی استفاده می‌کند.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="cbitem2">
+        <div class="cbheather">
+            <h4>آخرین اخبار اقتصادی</h4>
+            <a class="button" onclick="oopen('cbitem2')" href="javascript:void(0)">+</a>
+            <a class="button d-none" onclick="cloose('cbitem2')" href="javascript:void(0)">-</a>
+        </div>
+        <div class="cbdetails">
+            <ul>
+                <li>قیمت مسکن در ارزانترین منطقه تهران</li>
+                <li>قیمت جدید خودرو‌های وارداتی</li>
+                <li>جنجالی که یک عکس به پا کرد، ماجرای اگزوز خودروی برقی ایران</li>
+                <li>فرمول محاسبه سنوات و عیدی 1402</li>
+            </ul>
+        </div>
+    </div>
+    <div id="cbitem3">
+        <div class="cbheather">
+            <h4>آخرین اخبار ورزشی</h4>
+            <a class="button" onclick="oopen('cbitem3')" href="javascript:void(0)">+</a>
+            <a  class="button d-none" onclick="cloose('cbitem3')" href="javascript:void(0)">-</a>
+        </div>
+        <div class="cbdetails">
+            <ul>
+                <li>ترکیب ایران مقابل کالدونیا مشخص شد.</li>
+                <li>شوک بزرگ به نکونام پیش از دربی پایتخت</li>
+                <li>بزرگترین غایب پرسپولیس در دیدار النصر</li>
+                <li>رونالدو صد و بیست و هشتمین گلش را زد.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="cbitem4">
+        <div class="cbheather">
+            <h4>آخرین اخبار فرهنگی</h4>
+            <a class="button" onclick="oopen('cbitem4')" href="javascript:void(0)">+</a>
+            <a  class="button d-none" onclick="cloose('cbitem4')" href="javascript:void(0)">-</a>
+        </div>
+        <div class="cbdetails">
+            <ul>
+                <li>کشف یک موزاییک باستانی با طراحی شگفت‌انگیز در ترکیه</li>
+                <li>افتتاح بزرگترین نیروگاه برق خورشیدی جهان در امارات</li>
+                <li>آلودگی خوای تهران یک شنبه شدیدتر می‌شود.</li>
+                <li>ابن سینا برای امروز ما چه حرفی برای گفتن دارد؟</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

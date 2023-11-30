@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}اخبار روز{% endblock %}</title>
+    {% block header %}{% endblock %}
+</head>
+<body  onload="setInterval(middle_news_slide_timer,2000)">
+<div id="ads-banner">
+    <img src="{% static '' %}news/media/images/ads.gif" alt="ads">
+</div>
+
+<ul id="menu-1">
+    <li><a>خانه</a></li>
+    <li class="dropdown"><a href="">اخبار</a>
+        <ul id="menu-2">
+            <li><a>سیاسی</a></li>
+            <li><a>اجتماعی</a></li>
+            <li class="dropdown2"><a>ورزشی</a>
+                <div class="dropdown-level2-content">
+                    <a>فوتبال</a>
+                    <a>والیبال</a>
+                    <a>بسکتبال</a>
+                </div>
+            </li>
+            <li><a>اقتصادی</a></li>
+        </ul>
+    </li>
+    <li><a>آرشیو</a></li>
+    <li><a>درباره‌ی ‌ما</a></li>
+    <li><a>تماس با ما</a></li>
+    <li><a href="#" onclick="login_clicked()">ورود  به باشگاه خبرنگاران</a></li>
+    <li id="search">
+        <a id="magnifier"><img src="{% static '' %}news/media/images/search.png" alt="magnifier"></a>
+        <input id="search_input" type="text" name="search" placeholder="جستجو کنید ...">
+    </li>
+</ul>
+{% block body %}{% endblock %}
+</body>
+</html>
